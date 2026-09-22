@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const showroomController_1 = require("../controllers/showroomController");
+const auth_1 = require("../middleware/auth");
+const router = (0, express_1.Router)();
+router.get('/', showroomController_1.getShowrooms);
+router.get('/:id', showroomController_1.getShowroomById);
+router.post('/', auth_1.authenticateToken, auth_1.requireAdmin, showroomController_1.createShowroom);
+router.put('/:id', auth_1.authenticateToken, auth_1.requireAdmin, showroomController_1.updateShowroom);
+router.delete('/:id', auth_1.authenticateToken, auth_1.requireAdmin, showroomController_1.deleteShowroom);
+exports.default = router;
