@@ -115,3 +115,4 @@ npm run dev
 | `/api/enquiries` | GET | Admin | List all customer enquiries |
 | `/api/enquiries/:id` | PUT | Admin | Update lead status & internal notes |
 | `/api/stats` | GET | Admin | Dashboard summary analytics counters |
+ 
