@@ -17,6 +17,7 @@ import statsRoutes from './routes/statsRoutes';
 dotenv.config();
 
 const app = express();
+export default app;
 const PORT = process.env.PORT || 5000;
 const CORS_ORIGIN = process.env.CORS_ORIGIN || '*';
 
@@ -72,4 +73,6 @@ const startServer = async () => {
   });
 };
 
-startServer();
+if (process.env.NODE_ENV !== 'production') {
+  startServer();
+}
