@@ -23,7 +23,7 @@ export const MapComponent: React.FC<MapComponentProps> = ({
           <iframe
             title={activeShowroom.name}
             src={activeShowroom.googleMapEmbedUrl}
-            className="w-full h-full border-0 filter grayscale contrast-125 opacity-85 hover:grayscale-0 transition-all duration-500"
+            className="w-full h-full border-0"
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
